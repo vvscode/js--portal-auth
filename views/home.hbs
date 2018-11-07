@@ -9,7 +9,19 @@
 </head>
 
 <body>
-  <button>{{btnName}} ({{views}} views)</button>
+  <h3>User info:</h3>
+  <pre>
+    <code>{{user}}</code>
+  </pre>
+  <a href="{{LOGIN_URL}}">
+    <button type="button">{{btnName}} ({{views}} views)</button>
+  </a>
+  <hr />
+  <ul>
+    {{#each links as |link|}}
+      <li> <a href="{{link}}">Link to {{link}}</a></li>
+    {{/each}}
+  </ul>
 </body>
 
 </html>
