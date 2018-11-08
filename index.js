@@ -6,7 +6,7 @@ const crypt = require('./crypt');
 
 const SETTINGS = require('./settings');
 
-require('./portalMock');
+// require('./portalMock');
 
 const app = express();
 
