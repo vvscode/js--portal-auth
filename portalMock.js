@@ -43,6 +43,7 @@ app.get(/\/loginAtPortal.*/, async (req, res) => {
   axios
     .post(SETTINGS.loginCallbackUrl(), { data: guidPayload })
     .then(async response => {
+      // @todo: possilbe place to have plain text instead of object
       const loginRedirectData = await crypt.crypt(
         SETTINGS.algorithm,
         SETTINGS.key,

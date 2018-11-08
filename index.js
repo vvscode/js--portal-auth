@@ -54,6 +54,7 @@ app.post(/\/loginCallbak.*$/, async (req, res) => {
 
 app.get(/\/loginRedirect.*$/, async (req, res) => {
   const dataPart = (req.url.match(/data=(.+)/) || []).pop();
+  // @todo: potential replacement with plain string
   const dataDecrypted = await crypt.decrypt(
     SETTINGS.algorithm,
     SETTINGS.key,
